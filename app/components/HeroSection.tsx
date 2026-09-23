@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { FaTerminal, FaBars, FaTimes } from 'react-icons/fa';
 import dynamic from 'next/dynamic';
-import NeuronLogo from './NeuronLogo';
 
 const TerminalEmulator = dynamic(() => import('@/app/components/TerminalEmulator'), { ssr: false });
 
@@ -37,9 +36,6 @@ export default function HeroSection() {
 			<div className="absolute top-0 left-0 right-0 z-20">
 				<div className="max-w-7xl mx-auto px-4">
 					<div className="flex items-center justify-between h-16">
-						<div className="flex items-center">
-							<NeuronLogo />
-						</div>
 						{/* Desktop Nav */}
 						<nav className="hidden md:flex items-center space-x-8">
 							{[

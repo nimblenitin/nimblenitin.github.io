@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import NeuronLogo from './NeuronLogo';
 
 export default function FloatingHeader() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -41,17 +40,6 @@ export default function FloatingHeader() {
 			>
 				<div className="max-w-7xl mx-auto px-4">
 					<div className="flex items-center justify-between h-16">
-						{/* Logo/Name */}
-						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: isVisible ? 1 : 0 }}
-							transition={{ duration: 0.3, delay: 0.1 }}
-							className="cursor-pointer flex items-center"
-							onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-						>
-							<NeuronLogo />
-						</motion.div>
-
 						{/* Desktop Nav */}
 						<nav className="hidden md:flex items-center space-x-8">
 							{[
