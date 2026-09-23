@@ -52,8 +52,8 @@ const projects: Project[] = [
 	},
 	{
 		id: 5,
-		title: 'Restaurant Dish Recommender',
-		description: 'A web app that analyzes restaurant reviews to find and rank the most recommended dishes. It uses NLP and fine-tuned BERT models to score dishes based on sentiment, popularity, and nutrition data from the USDA. Built with React, Flask, and Playwright.',
+		title: 'Restaurant Dish Sentiment',
+		description: 'Often when I go to a restaurant I scan through the reviews to select a dish. This is a web app that analyzes restaurant reviews to find and rank the most recommended dishes. It uses NLP and fine-tuned BERT models to score dishes based on sentiment, popularity, and nutrition data from the USDA. Built with React, Flask, and Playwright.',
 		image: '/lil_guy_eating.png',
 		tags: ['NLP', 'BERT', 'React', 'Flask', 'Playwright'],
 		src: 'https://github.com/nimblenitin/restaurant-dish-sentiment',

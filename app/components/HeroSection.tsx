@@ -147,7 +147,7 @@ export default function HeroSection() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 						className="text-base md:text-lg text-gray-700 mb-8"
 					>
-						I am a resilient and passionate developer. I love building stuff that makes a positive difference. I love writing code - implementing data structures and algorithms that stand the test of time. 						I enjoy taking intiative and putting my 200% in whatever I pick up.
+						I am a resilient and passionate developer. I love building stuff that makes a positive difference - writing code, implementing data structures and algorithms that stand the test of time. I enjoy taking intiative and putting my 200% in whatever I pick up.
 						<br /><br />
 						As a kid when I was given a YoYo(Toy) instead of playing with it, I took it apart, experimented with how it showed light when played with and the put it back together. I have a curiosity to know how everything works.
 						<br /><br />
