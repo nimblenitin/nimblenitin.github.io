@@ -11,7 +11,8 @@ export default function WhatIDoSection() {
 			style={{ backgroundImage: 'url(/bg-img.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
 		>
 			{/* Gradient overlay */}
-			<div className="absolute inset-0 bg-gradient-to-b from-white/60 to-white/60 pointer-events-none z-0" />
+			<div className="absolute inset-0 bg-gradient-to-b from-purple-50/90 to-white/60 pointer-events-none z-0" />
+			<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.7),rgb(255, 255, 255, 1))] pointer-events-none z-0" />
 			<div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 				{/* Left: Dummy Image */}
 				<div className="flex justify-center items-center">
@@ -35,8 +36,7 @@ export default function WhatIDoSection() {
 					className="flex flex-col justify-center"
 				>
 					<h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 drop-shadow-lg">What do I do?</h2>
-				<p className="text-base md:text-lg text-gray-700 mb-8">
-						{/* I specialize in building robust, scalable, and user-friendly web applications. My expertise spans backend development, AI/ML solutions, and modern frontend frameworks. I love solving complex problems, optimizing performance, and delivering clean, maintainable code. */}
+					<p className="text-base md:text-lg text-gray-700 mb-8">
 						I build intelligent, high-performance systems that solve real-world problems at scale. With professional experience leading backend architecture, deploying at enterprise scale, and working hands-on with AI/ML models, I bridge theory with execution. I&apos;m driven by curiosity, a love for clean and efficient code, and a habit of learning fast. Whether it&apos;s debugging deep system bottlenecks, training models with reasoning capabilities, or engineering scalable microservices, I bring a mix of analytical thinking, technical depth, and adaptability to every project.
 					</p>
 					<ul className="list-disc pl-5 text-gray-700 space-y-2">

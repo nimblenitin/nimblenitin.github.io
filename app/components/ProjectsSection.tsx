@@ -14,6 +14,7 @@ interface Project {
 	tags: string[];
 	src: string;
 	audio?: { input: string; output: string };
+	imageClass?: string;
 }
 
 const projects: Project[] = [
@@ -29,7 +30,7 @@ const projects: Project[] = [
 		id: 2,
 		title: 'Whale Audio Generation using VampNet',
 		description: 'A generative audio model that transforms input audio into synthetic whale coda recordings. Deployed a Gradio interface for end-to-end audio-to-coda generation, processed ~300 real whale recordings using custom extraction scripts, and evaluated synthetic audio quality against real recordings using Fréchet Audio Distance (FAD).',
-		image: '/wham-project.png',
+		image: '/whale.jpeg',
 		tags: ['PyTorch', 'Audio ML', 'Gradio', 'VampNet', 'Python'],
 		src: 'https://github.com/nimblenitin/wham-project',
 		audio: { input: '/wham-input-1.mp3', output: '/output.wav' },
@@ -47,6 +48,7 @@ const projects: Project[] = [
 		title: 'GPT-OSS with RL - Training LLM to Beat 2048',
 		description: 'Fine-tuned OpenAI gpt-oss-20b using GRPO reinforcement learning to play 2048. The model generates Python code that learns strategy through three reward signals - whether the code runs, whether it only uses stdlib, and whether it actually wins. Used 4-bit quantization and LoRA to efficiently train the 20B parameter model.',
 		image: '/gpt-rl.gif',
+		imageClass: 'max-w-[85%] max-h-[85%]',
 		tags: ['RL', 'GRPO', 'Unsloth', 'PyTorch', 'LLMs', 'Python'],
 		src: 'https://github.com/nimblenitin/gpt-oss-with-rl',
 	},
@@ -54,15 +56,15 @@ const projects: Project[] = [
 		id: 5,
 		title: 'Restaurant Dish Sentiment',
 		description: 'Often when I go to a restaurant I scan through the reviews to select a dish. This is a web app that analyzes restaurant reviews to find and rank the most recommended dishes. It uses NLP and fine-tuned BERT models to score dishes based on sentiment, popularity, and nutrition data from the USDA. Built with React, Flask, and Playwright.',
-		image: '/lil_guy_eating.png',
+		image: '/cat%20eating.jpeg',
 		tags: ['NLP', 'BERT', 'React', 'Flask', 'Playwright'],
 		src: 'https://github.com/nimblenitin/restaurant-dish-sentiment',
 	},
 	{
 		id: 6,
-		title: 'FreezeGPT - Pin ChatGPT Code Blocks',
-		description: 'Chrome extension that pins ChatGPT code blocks into floating windows so you can keep chatting while referring to code. Hover over any code block, click the freeze button, and drag/resize the floating window as needed.',
-		image: '/freezegpt.gif',
+		title: 'FreezeGPT - Pin a particular GPT chat section',
+		description: 'This is a Chrome extension that helps to pin chat when your chat history grows and you want to avoid scrolling all the way up. It allows to pin GPT chat window into floating windows so you can keep chatting while referring to specific chat section like a code block.',
+		image: '/pinchat.jpeg',
 		tags: ['Chrome Extension', 'JavaScript', 'DOM Manipulation'],
 		src: 'https://github.com/nimblenitin/freezegpt',
 	},
@@ -72,7 +74,7 @@ const projects: Project[] = [
 		description: 'This is an incident diagnostic assistant that helps engineers troubleshoot production issues faster and is built around the ',
 		descriptionLink: { text: '7 habits of highly effective agentic systems', url: 'https://agent-habits.github.io/' },
 		descriptionEnd: ' - an interesting article by Inbar Rose. When an alert fires, it loads the relevant runbook, suggests diagnostic commands, and proposes relevant changes - all through a Streamlit chat interface with pre-loaded alert context helping to diagnose critical production issues faster.',
-		image: '/incident-copilot.gif',
+		image: '/ida.jpeg',
 		tags: ['LLMs', 'ReActAgent', 'FastAPI', 'Prometheus', 'Kubernetes', 'Streamlit'],
 		src: 'https://github.com/nimblenitin/incident-diagnosis-agent-assistant',
 	},
@@ -119,7 +121,7 @@ export default function ProjectsSection() {
 										<img
 											src={project.image}
 											alt={project.title}
-											className="max-w-full max-h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+											className={`object-contain rounded-lg group-hover:scale-105 transition-transform duration-300 ${project.imageClass || 'max-w-full max-h-full'}`}
 										/>
 									)}
 								</div>
